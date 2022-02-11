@@ -1,0 +1,186 @@
+@import url(https://fonts.googleapis.com/css?family=Outfit:300,regular,600);
+html {
+    box-sizing: border-box;
+}
+*,
+*::before {
+    box-sizing: inherit;
+}
+body {
+    margin: 0;
+    height: 100vh;
+    background: #0D192C;
+    font-family: 'Outfit', sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+    color: #8BACD9;
+}
+a {
+    text-decoration: none;
+    color: #FFF;
+}
+a:hover {
+    color: #00FFF8;;
+}
+main {
+    max-width: 1440px;
+    height: 100vh;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.wrapper {
+    width: 350px;
+    min-height: 596px;
+    background: #15263F;
+    box-shadow: 0px 25px 50px rgba(0, 0, 0, 0.095);
+    border-radius: 15px;
+    /* padding: 24px 24px 0; */
+}
+.code {
+    border-radius: 8px;
+    width: 302px;
+    height: 302px;
+    background-image: url(../images/image-equilibrium.jpg);
+    background-size: cover;
+    margin: 24px;
+    position: relative;
+}
+.blend {
+    border-radius: 8px;
+    width: 302px;
+    height: 302px;
+    opacity: 0;
+}
+.code:hover .blend {
+    display: block;
+    background: #00FFF8;
+    mix-blend-mode: normal;
+    opacity: 0.5;
+    cursor: pointer;
+    transition: all .5s;
+}
+.view-img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: all .5s;
+}
+.code:hover .view-img {
+    opacity: 1;
+}
+.content {
+    width: 302px;
+    margin: 0 auto;
+}
+.title {
+    margin-bottom: 16px;
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 28px;
+}
+.text {
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 26px;
+    margin-bottom: 24px;
+}
+.info {
+    padding-bottom: 24px;
+    border-bottom: 1px solid #2E405A;;
+    margin-bottom: 16px;
+}
+.info__inner {
+    width: 302px;
+    height: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.price {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+    color: #00FFF8;
+    padding-left: 17.48px;
+    position: relative;
+}
+.price::before {
+    content: '';
+    width: 11px;
+    height: 18px;
+    background: url(../images/icon-ethereum.svg);
+    position: absolute;
+    left: 0;
+    top: 1px;
+}
+.date {
+    font-size: 16px;
+    line-height: 20px;
+    padding-left: 23.7px;
+    position: relative;
+}
+.date::before {
+    content: '';
+    width: 16px;
+    height: 16px;
+    background: url(../images/icon-clock.svg);
+    position: absolute;
+    left: 0;
+    top: 2px;
+}
+.author {
+    height: 33px;
+    display: flex;
+    align-items: center;
+}
+.avatar {
+    width: 33px;
+    height: 33px;
+    background: url(../images/image-avatar.png);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    border: 1px solid #FFF;
+    border-radius: 50%;
+    margin-right: 16px;
+}
+.name {
+    font-size: 16px;
+    line-height: 20px;  
+}
+@media (max-width:375px) {
+    .wrapper {
+        width: 327px;
+        min-height: 543px;
+    }
+    .code, .blend {
+        width: 278px;
+        height: 278px;
+    }
+    .content {
+        width: 278px;
+    }
+    .title {
+        margin-bottom: 12px;
+    }
+    .text {
+        margin-bottom: 16px;
+    }
+    .info {
+        padding-bottom: 16px;
+        border-bottom: 1px solid #2E405A;;
+        margin-bottom: 16px;
+    }
+    .info__inner {
+        width: 278px;
+        height: 19px;
+    }
+    .price, .date, .name {
+        font-size: 15px;
+        line-height: 19px;
+    }
+}
